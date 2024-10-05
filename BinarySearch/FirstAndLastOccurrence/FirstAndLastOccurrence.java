@@ -1,3 +1,4 @@
+package FirstAndLastOccurrence;
 import java.util.*;
 
 public class FirstAndLastOccurrence 
