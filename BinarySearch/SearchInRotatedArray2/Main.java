@@ -2,12 +2,12 @@ public class Main {
     public static void main(String[] args) {
         
         int arr[] = {3,1,2,3,3,3,3};
-        int target = 1;
+        int target = 5;
         
-        System.out.println(findTargetIndex(arr, target));
+        System.out.println(target + " Present in arrat (True/False) : " + CheckTargetPresent(arr, target));
     }
 
-    public static int findTargetIndex(int arr[], int target)
+    public static boolean CheckTargetPresent(int arr[], int target)
     {
 
         int n = arr.length;
@@ -20,10 +20,10 @@ public class Main {
             int mid = low + (high-low)/2;
 
             if(arr[mid] == target){
-                return mid;
+                return true;
             }
 
-            
+
             if(arr[low] == arr[mid] && arr[mid] ==arr[high]){
                 low = low+1;
                 high = high-1;
@@ -54,6 +54,6 @@ public class Main {
             }
         }
 
-        return -1;
+        return false;
     }
 }
