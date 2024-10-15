@@ -4,19 +4,15 @@ public class Main{
         
         int[] bloomDay = {1, 10, 3, 10, 2};
         int k = 1;
-        int m = 3;
-
-        
+        int m = 3;  
         if( k * m > bloomDay.length ){
             System.out.println("-1");;
         }
 
         int low =  Arrays.stream(bloomDay).min().getAsInt();
         int high = Arrays.stream(bloomDay).max().getAsInt();
-
-
         int ans = -1;
-
+        
         while(low<=high){
             int mid = low + (high-low)/2;
 
@@ -32,8 +28,6 @@ public class Main{
         System.out.println(ans);
 
     }
-
-    
     public static boolean check(int[] bloomDay, int m, int k, int mid){
 
         int count = 0;
